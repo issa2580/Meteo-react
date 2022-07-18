@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "react-router-dom": "^6.3.0",
+    "react-toastify": "^9.0.5",
+    "autoprefixer": "10.4.5" 
+  }
+}
