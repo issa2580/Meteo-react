@@ -4,6 +4,7 @@ import 'weather-icons/css/weather-icons.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./component/weather";
 import Form from './component/form';
+import Bgimage from '../src/bg.jpg'
 
 
 const API_Key = "6334a3edfd0059fa5504ef1b1f847965";
@@ -91,15 +92,35 @@ class App extends React.Component {
 
   render (){
     return (
-      <div className="app">
-        <Form loadWeather = {this.getWeather} error = {this.state.error} />
-        <Weather 
-          capital = {this.state.capital} 
-          temp = {this.state.celsius} 
-          description = {this.state.description}
-          weatherIcon = {this.state.icon}
-        />
+      // <div className="app">
+      //   <Form loadWeather = {this.getWeather} error = {this.state.error} />
+      //   <Weather 
+      //     capital = {this.state.capital} 
+      //     temp = {this.state.celsius} 
+      //     description = {this.state.description}
+      //     weatherIcon = {this.state.icon}
+      //   />
+      // </div>
+      <body>
+  <div class="app-wrap">
+    <legend className="title">Application meteo</legend>
+    <header>
+      <Form loadWeather = {this.getWeather} error = {this.state.error} />
+    </header>
+    <main>
+      <section class="location">
+        <div class="city">{this.state.capital}</div>
+        <div class="date">Wednesday 22 July 2020</div>
+      </section>
+      <div class="current">
+        <div class="temp">{this.state.celsius}<span>°c</span></div>
+        <div class="weather">{this.state.description}</div>
+        <i style={{'color':'white'}} className={`wi ${this.state.icon} display-1`}></i>
+        <div class="hi-low">13°c / 16°c</div>
       </div>
+    </main>
+  </div>
+</body>
     );
   }
 }
