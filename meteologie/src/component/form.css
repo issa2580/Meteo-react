@@ -1,95 +1,39 @@
-/* .form{
-    width: 100%;
-    background-color: green;
-} */
 form{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
-
-/* form input:focus{
-    background-color: blue;
-    box-shadow: none !important;
-} */
-
 .btn{
     background-color: white;
     color: #000;
     padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 700;
 }
+.rows {
+    display: flex;
+    gap: 30px;
+    width: 30%;
+    margin: auto;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 form input[name = "capital"] {
-    background-color: transparent;
     color: white;
     border: none;
-    border-radius: 1px;
+    border-radius: 5px;
 }
-form input[placeholder = "City or Capital"] {
-    background-color: transparent;
-    color: white;
-    font-size: 20px;
+form input[placeholder = "Enter City or Capital"] {
+    color: black;
+    font-size: 25px;
     text-align: center;
-    font-style: italic;
-    font-weight: lighter;
+    font-style: normal;
+    font-weight: bolder;
     text-transform: capitalize;
 }
-
-/* fieldset.scheduler-border {
-    background-color: #120334;
-    border: 1px groove #ddd !important;
-    padding: 0 1.4em 1.4em 1.4em !important;
-    position: relative;
-    right: 35%;
-    top: 10vh;
-    height: 60vh;
-    width: 80vh;
-    margin: 0 0 1.5em 0 !important;
-    -webkit-box-shadow:  0px 0px 0px 0px #000;
-            box-shadow:  0px 0px 0px 0px #000;
-} */
-
-/* legend.scheduler-border {
-    position: relative;
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    color: white;
-    left: 10%;
-    top: 10vh;
-    font-size: 40px !important;
-    font-weight: bold !important;
-    text-align: left !important;
-} */
-
-/* .field{
-    background-color: #120334;
-    position: fixed;
-    width: 45vh;
-    height: 55vh;
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    color: white;
-    text-align: center;
-    border-radius: 15px;
-    left: 59%;
-    top: 12.7vh;
-} */
-
-/* .fermer-field{
-    position: absolute;
-    right: 0;
-    display: block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    user-select: none;
-    cursor: pointer;
-}
-
-.fermer-field:hover{
-    background-color: #FF4949;
-    color: white;
-} */
 

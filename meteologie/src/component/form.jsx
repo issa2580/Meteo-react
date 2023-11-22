@@ -4,25 +4,21 @@ import "./form.css";
 const Form = props => {
     return(
         <div className="form">
-            <fieldset className="scheduler-border">
-                <form onSubmit={props.loadWeather}>
-                <div className="row">
-                    <div className="col-md-6 offset-md-2">
+            <form onSubmit={props.loadWeather}>
+                <div className="rows">
                         <input
                             type="text" 
                             className="form-control" 
                             name="capital" 
-                            autoComplete="off" 
-                            placeholder="City or Capital"
+                            autoComplete="off"
+                            placeholder="Enter City or Capital"
                         />
-                    </div>
-                    <div className="col-md-3 mt-md-0 text-md-left">
+                    <div>
                         <button className="btn">Search</button>
                     </div>
                 </div>
             </form>
             <div>{props.error ? error() : null}</div>
-            </fieldset> 
         </div>
     );
 

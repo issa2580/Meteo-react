@@ -17,6 +17,8 @@ class App extends React.Component {
       icon: undefined,
       main: undefined,
       celsius: undefined,
+      min: undefined,
+      max: undefined,
       error: false,
       description: ""
     };
@@ -79,6 +81,8 @@ class App extends React.Component {
       this.setState({
         capital: `${response.name}, ${response.sys.country}`,
         celsius: response.main.temp,
+        min: response.main.temp_min,
+        max: response.main.temp_max,
         description: response.weather[0].description
         
       });
@@ -103,20 +107,20 @@ class App extends React.Component {
       // </div>
       <body>
   <div class="app-wrap">
-    <legend className="title">Application meteo</legend>
+    <legend className="title">Weather App</legend>
     <header>
       <Form loadWeather = {this.getWeather} error = {this.state.error} />
     </header>
     <main>
       <section class="location">
         <div class="city">{this.state.capital}</div>
-        <div class="date">Wednesday 22 July 2020</div>
+        <div class="date">{new Date().toLocaleString()}</div>
       </section>
       <div class="current">
-        <div class="temp">{this.state.celsius}<span>°c</span></div>
+        <div class="temp">{Math.round(this.state.celsius)}<span>&deg;c</span></div>
         <div class="weather">{this.state.description}</div>
         <i style={{'color':'white'}} className={`wi ${this.state.icon} display-1`}></i>
-        <div class="hi-low">13°c / 16°c</div>
+        <div class="hi-low">{Math.round(this.state.min)}&deg;c / {Math.round(this.state.max)}&deg;c</div>
       </div>
     </main>
   </div>
