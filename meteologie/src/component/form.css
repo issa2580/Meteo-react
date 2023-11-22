@@ -37,3 +37,15 @@ form input[placeholder = "Enter City or Capital"] {
     text-transform: capitalize;
 }
 
+
+
+@media (max-width: 600px) {
+    .rows {
+        display: flex;
+        gap: 30px;
+        width: 50%;
+        margin: auto;
+    }
+
+}
+
