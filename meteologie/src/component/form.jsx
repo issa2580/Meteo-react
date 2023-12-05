@@ -5,18 +5,13 @@ const Form = props => {
     return(
         <div className="form">
             <form onSubmit={props.loadWeather}>
-                <div className="rows">
-                        <input
-                            type="text" 
-                            className="form-control" 
-                            name="capital" 
-                            autoComplete="off"
-                            placeholder="Enter City or Capital"
-                        />
-                    <div>
-                        <button className="btn">Search</button>
-                    </div>
-                </div>
+                <input
+                    type="text" 
+                    className="form-control" 
+                    name="capital" 
+                    autoComplete="off"
+                    placeholder="Enter City or Capital"
+                />
             </form>
             <div>{props.error ? error() : null}</div>
         </div>
